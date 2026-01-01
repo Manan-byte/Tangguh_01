@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 6%;
+    --foreground: 180 100% 98%;
+
+    --card: 210 18% 10%;
+    --card-foreground: 180 100% 98%;
+
+    --popover: 210 18% 10%;
+    --popover-foreground: 180 100% 98%;
+
+    --primary: 180 100% 45%;
+    --primary-foreground: 210 20% 6%;
+
+    --secondary: 210 15% 15%;
+    --secondary-foreground: 180 100% 98%;
+
+    --muted: 210 15% 18%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 165 80% 50%;
+    --accent-foreground: 210 20% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
+    --ring: 180 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --electric-cyan: 180 100% 45%;
+    --electric-teal: 165 80% 50%;
+    --dark-surface: 210 18% 10%;
+    --dark-deep: 210 20% 6%;
+
+    /* Gradients */
+    --gradient-electric: linear-gradient(135deg, hsl(180 100% 45%) 0%, hsl(165 80% 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(210 20% 6%) 0%, hsl(210 18% 12%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(180 100% 45% / 0.15) 0%, transparent 70%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(180 100% 45% / 0.3);
+    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+    --shadow-button: 0 8px 30px hsl(180 100% 45% / 0.4);
+
+    /* Fonts */
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 210 18% 10%;
+    --sidebar-foreground: 180 100% 98%;
+    --sidebar-primary: 180 100% 45%;
+    --sidebar-primary-foreground: 210 20% 6%;
+    --sidebar-accent: 210 15% 18%;
+    --sidebar-accent-foreground: 180 100% 98%;
+    --sidebar-border: 210 15% 20%;
+    --sidebar-ring: 180 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-electric);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .section-padding {
+    @apply py-20 md:py-32 px-4 md:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.5);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
