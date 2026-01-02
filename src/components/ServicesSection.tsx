@@ -1,37 +1,39 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Wrench, Settings, Lightbulb, GraduationCap, ArrowRight } from "lucide-react";
-
-const services = [
-  {
-    icon: Wrench,
-    title: "Konversi Motor",
-    description: "Mengubah mesin BBM menjadi motor listrik berbasis baterai dengan komponen berkualitas tinggi dan standar keamanan.",
-    features: ["Motor BLDC", "Controller", "Baterai Lithium", "Modifikasi Rangka"],
-  },
-  {
-    icon: Settings,
-    title: "Perawatan & Servis",
-    description: "Pemeliharaan baterai, motor, sistem kelistrikan, pemeriksaan rutin, dan penggantian spare part.",
-    features: ["Diagnostik", "Spare Part", "Tune-up", "Garansi Servis"],
-  },
-  {
-    icon: Lightbulb,
-    title: "Konsultasi & R&D",
-    description: "Konsultasi teknis untuk modifikasi kendaraan dan riset pengembangan efisiensi motor & sistem kontrol.",
-    features: ["Konsultasi Teknis", "Riset Baterai", "Sistem Kontrol", "Custom Project"],
-  },
-  {
-    icon: GraduationCap,
-    title: "Pendidikan & Pelatihan",
-    description: "Pelatihan teknis untuk bengkel, SMK/teknisi, pelatihan legal & keselamatan, workshop masyarakat.",
-    features: ["Training Bengkel", "Workshop SMK", "Sertifikasi", "Community Event"],
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const ServicesSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: false, margin: "-100px", amount: 0.2 });
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      icon: Wrench,
+      title: t.services.items.conversion.title,
+      description: t.services.items.conversion.description,
+      features: t.services.items.conversion.features,
+    },
+    {
+      icon: Settings,
+      title: t.services.items.maintenance.title,
+      description: t.services.items.maintenance.description,
+      features: t.services.items.maintenance.features,
+    },
+    {
+      icon: Lightbulb,
+      title: t.services.items.consulting.title,
+      description: t.services.items.consulting.description,
+      features: t.services.items.consulting.features,
+    },
+    {
+      icon: GraduationCap,
+      title: t.services.items.education.title,
+      description: t.services.items.education.description,
+      features: t.services.items.education.features,
+    },
+  ];
 
   return (
     <section id="layanan" className="section-padding relative overflow-hidden bg-secondary/30">
@@ -47,13 +49,13 @@ export const ServicesSection = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">
-            Layanan Kami
+            {t.services.sectionLabel}
           </span>
           <h2 className="font-display font-bold text-3xl md:text-5xl text-foreground mb-6">
-            Solusi <span className="gradient-text">Lengkap</span>
+            {t.services.title} <span className="gradient-text">{t.services.titleHighlight}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Kami menyediakan layanan komprehensif untuk semua kebutuhan kendaraan listrik Anda.
+            {t.services.description}
           </p>
         </motion.div>
 
@@ -92,7 +94,7 @@ export const ServicesSection = () => {
                     href="#kontak"
                     className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all"
                   >
-                    Pelajari Lebih Lanjut
+                    {t.services.learnMore}
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>

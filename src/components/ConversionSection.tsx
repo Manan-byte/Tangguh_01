@@ -3,26 +3,23 @@ import { useRef } from "react";
 import { Wrench, Cpu, Battery, Cable, CheckCircle2 } from "lucide-react";
 import { Button } from "./ui/button";
 import conversionImg from "@/assets/conversion-kit.jpg";
-
-const benefits = [
-  "Pengurangan emisi CO (Carbon Monoksida)",
-  "Pengurangan penggunaan BBM impor",
-  "Peluang industri komponen lokal",
-  "Lebih cepat dan tanpa suara",
-  "Perawatan lebih murah",
-  "Ramah lingkungan",
-];
-
-const components = [
-  { icon: Cpu, name: "Controller", desc: "Sistem kontrol canggih" },
-  { icon: Battery, name: "Baterai", desc: "Lithium-ion berkualitas" },
-  { icon: Wrench, name: "Dinamo BLDC", desc: "Motor listrik efisien" },
-  { icon: Cable, name: "Kelistrikan", desc: "Sistem pengisian lengkap" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const ConversionSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: false, margin: "-100px", amount: 0.2 });
+  const { t, language } = useLanguage();
+
+  const components = [
+    { icon: Cpu, name: t.conversion.components.controller.name, desc: t.conversion.components.controller.desc },
+    { icon: Battery, name: t.conversion.components.battery.name, desc: t.conversion.components.battery.desc },
+    { icon: Wrench, name: t.conversion.components.motor.name, desc: t.conversion.components.motor.desc },
+    { icon: Cable, name: t.conversion.components.electrical.name, desc: t.conversion.components.electrical.desc },
+  ];
+
+  const whatsappMessage = language === "id"
+    ? "Halo, saya ingin konsultasi konversi motor listrik"
+    : "Hello, I want to consult about electric motor conversion";
 
   return (
     <section id="konversi" className="section-padding relative overflow-hidden">
@@ -53,9 +50,9 @@ export const ConversionSection = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="absolute -bottom-6 -right-6 glass-card rounded-2xl p-6 max-w-[280px] hidden md:block"
             >
-              <div className="text-3xl font-display font-bold gradient-text mb-1">BBM → Listrik</div>
+              <div className="text-3xl font-display font-bold gradient-text mb-1">BBM → {language === "id" ? "Listrik" : "Electric"}</div>
               <p className="text-sm text-muted-foreground">
-                Konversi motor bensin Anda menjadi motor listrik ramah lingkungan
+                {t.conversion.floatingCard}
               </p>
             </motion.div>
           </motion.div>
@@ -67,15 +64,13 @@ export const ConversionSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">
-              Layanan Konversi
+              {t.conversion.sectionLabel}
             </span>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-6">
-              Konversi Motor <span className="gradient-text">Listrik</span>
+              {t.conversion.title} <span className="gradient-text">{t.conversion.titleHighlight}</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Mengubah mesin BBM menjadi motor listrik berbasis baterai—mencakup 
-              pemasangan motor listrik (BLDC), controller, baterai, sistem pengisian, 
-              serta modifikasi rangka jika diperlukan.
+              {t.conversion.description}
             </p>
 
             {/* Components */}
@@ -101,7 +96,7 @@ export const ConversionSection = () => {
 
             {/* Benefits */}
             <div className="grid grid-cols-2 gap-3 mb-8">
-              {benefits.map((benefit, index) => (
+              {t.conversion.benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit}
                   initial={{ opacity: 0, x: -20 }}
@@ -117,11 +112,11 @@ export const ConversionSection = () => {
 
             <Button variant="hero" size="lg" asChild>
               <a 
-                href="https://wa.me/628567360026?text=Halo,%20saya%20ingin%20konsultasi%20konversi%20motor%20listrik" 
+                href={`https://wa.me/628567360026?text=${encodeURIComponent(whatsappMessage)}`}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                Konsultasi Konversi
+                {t.conversion.consultButton}
               </a>
             </Button>
           </motion.div>

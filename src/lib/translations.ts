@@ -1,0 +1,483 @@
+export const translations = {
+  id: {
+    // Navbar
+    nav: {
+      about: "Tentang",
+      products: "Produk",
+      conversion: "Konversi",
+      gallery: "Galeri",
+      contact: "Kontak",
+      contactUs: "Hubungi Kami",
+    },
+    // Hero
+    hero: {
+      badge: "Inovasi Kendaraan Listrik Indonesia",
+      title1: "Unlimited",
+      title2: "Adventure",
+      description: "Motor trail listrik dengan performa tinggi tanpa emisi. Rasakan sensasi berkendara yang tangguh dan ramah lingkungan.",
+      viewProducts: "Lihat Produk",
+      motorConversion: "Konversi Motor",
+      electric: "Listrik",
+      emission: "Emisi",
+      adventure: "Petualangan",
+      scroll: "Scroll",
+    },
+    // About
+    about: {
+      sectionLabel: "Tentang Kami",
+      title: "Tangguh",
+      titleHighlight: "Electric Vehicle",
+      description: "Perusahaan profesional di bidang Kendaraan Listrik Kreatif, berkontribusi dalam mendukung keberhasilan program pemerintah melalui produk-produk dengan tingkat inovasi tinggi.",
+      vision: "Visi",
+      visionText: "Menjadi inovasi baru dalam industri kendaraan off-road di Indonesia dengan menghadirkan solusi mobilitas yang berjangka panjang, tangguh, dan menyenangkan untuk petualangan. Menjadi pemimpin dalam solusi konversi kendaraan bermotor BBM ke listrik di Indonesia.",
+      mission: "Misi",
+      missionItems: [
+        "Mengembangkan motor trail listrik dengan teknologi terbaru yang aman dan efisien.",
+        "Mendorong penggunaan kendaraan listrik untuk mengurangi emisi karbon.",
+        "Menyediakan layanan konversi dan perawatan yang terpercaya.",
+      ],
+      valuesTitle: "Nilai-Nilai Perusahaan",
+      values: {
+        innovation: { title: "Inovasi", description: "Menciptakan produk dan teknologi terkini dengan solusi baru yang lebih baik." },
+        quality: { title: "Kualitas", description: "Menghadirkan produk dengan standar keamanan tinggi dan tahan lama." },
+        service: { title: "Pelayanan", description: "Membangun hubungan kuat dengan pelanggan dan memberikan pelayanan terbaik." },
+        collaboration: { title: "Kolaborasi", description: "Bekerja sama dengan berbagai vendor untuk suku cadang berkualitas." },
+      },
+      downloadProfile: "Download Company Profile",
+      downloadProfileDesc: "Pelajari lebih lanjut tentang Tangguh EV melalui company profile kami",
+    },
+    // Products
+    products: {
+      sectionLabel: "Produk Kami",
+      title: "Motor Trail",
+      titleHighlight: "Listrik",
+      description: "Tiga varian motor trail listrik dengan performa tinggi untuk berbagai kebutuhan petualangan Anda.",
+      topSpeed: "Top Speed",
+      range: "Jarak",
+      power: "Power",
+      detailButton: "Detail Produk",
+      st3: {
+        tagline: "Dual Purpose",
+        description: "Ban dua fungsi dengan kombinasi sempurna dari tarikan kuat di medan berat dan stabilitas maksimal di jalan raya. Mudah dikendalikan bahkan oleh pengguna baru.",
+      },
+      dx4: {
+        tagline: "Ready to Race",
+        description: "Dirancang khusus untuk para profesional yang haus akan kecepatan dan ketangguhan di setiap lintasan. Didukung teknologi unggulan dan desain aerodinamis.",
+      },
+      sp5: {
+        tagline: "Supermoto",
+        description: "Motor trail tangguh dengan konsep supermoto, menaklukkan medan berat sekaligus memberikan kenyamanan dan stabilitas di jalan perkotaan.",
+      },
+    },
+    // Conversion
+    conversion: {
+      sectionLabel: "Layanan Konversi",
+      title: "Konversi Motor",
+      titleHighlight: "Listrik",
+      description: "Mengubah mesin BBM menjadi motor listrik berbasis baterai—mencakup pemasangan motor listrik (BLDC), controller, baterai, sistem pengisian, serta modifikasi rangka jika diperlukan.",
+      floatingCard: "Konversi motor bensin Anda menjadi motor listrik ramah lingkungan",
+      components: {
+        controller: { name: "Controller", desc: "Sistem kontrol canggih" },
+        battery: { name: "Baterai", desc: "Lithium-ion berkualitas" },
+        motor: { name: "Dinamo BLDC", desc: "Motor listrik efisien" },
+        electrical: { name: "Kelistrikan", desc: "Sistem pengisian lengkap" },
+      },
+      benefits: [
+        "Pengurangan emisi CO (Carbon Monoksida)",
+        "Pengurangan penggunaan BBM impor",
+        "Peluang industri komponen lokal",
+        "Lebih cepat dan tanpa suara",
+        "Perawatan lebih murah",
+        "Ramah lingkungan",
+      ],
+      consultButton: "Konsultasi Konversi",
+    },
+    // Services
+    services: {
+      sectionLabel: "Layanan Kami",
+      title: "Solusi",
+      titleHighlight: "Lengkap",
+      description: "Kami menyediakan layanan komprehensif untuk semua kebutuhan kendaraan listrik Anda.",
+      learnMore: "Pelajari Lebih Lanjut",
+      items: {
+        conversion: {
+          title: "Konversi Motor",
+          description: "Mengubah mesin BBM menjadi motor listrik berbasis baterai dengan komponen berkualitas tinggi dan standar keamanan.",
+          features: ["Motor BLDC", "Controller", "Baterai Lithium", "Modifikasi Rangka"],
+        },
+        maintenance: {
+          title: "Perawatan & Servis",
+          description: "Pemeliharaan baterai, motor, sistem kelistrikan, pemeriksaan rutin, dan penggantian spare part.",
+          features: ["Diagnostik", "Spare Part", "Tune-up", "Garansi Servis"],
+        },
+        consulting: {
+          title: "Konsultasi & R&D",
+          description: "Konsultasi teknis untuk modifikasi kendaraan dan riset pengembangan efisiensi motor & sistem kontrol.",
+          features: ["Konsultasi Teknis", "Riset Baterai", "Sistem Kontrol", "Custom Project"],
+        },
+        education: {
+          title: "Pendidikan & Pelatihan",
+          description: "Pelatihan teknis untuk bengkel, SMK/teknisi, pelatihan legal & keselamatan, workshop masyarakat.",
+          features: ["Training Bengkel", "Workshop SMK", "Sertifikasi", "Community Event"],
+        },
+      },
+    },
+    // Gallery
+    gallery: {
+      sectionLabel: "Galeri",
+      title: "Dokumentasi",
+      titleHighlight: "Kami",
+      description: "Lihat koleksi foto produk dan kegiatan Tangguh Electric Vehicle.",
+      filters: {
+        all: "Semua",
+      },
+      categories: {
+        product: "Produk",
+        delivery: "Delivery",
+        adventure: "Adventure",
+      },
+    },
+    // Contact
+    contact: {
+      sectionLabel: "Hubungi Kami",
+      title: "Siap Untuk",
+      titleHighlight: "Petualangan?",
+      description: "Hubungi kami untuk informasi lebih lanjut tentang produk atau layanan konversi.",
+      infoTitle: "Informasi Kontak",
+      address: "Alamat",
+      phone: "Telepon",
+      email: "Email",
+      followUs: "Ikuti Kami",
+      sendMessage: "Kirim Pesan",
+      form: {
+        name: "Nama Lengkap",
+        namePlaceholder: "Nama Anda",
+        email: "Email",
+        emailPlaceholder: "email@anda.com",
+        phone: "No. Telepon",
+        phonePlaceholder: "+62...",
+        message: "Pesan",
+        messagePlaceholder: "Tulis pesan Anda...",
+        submit: "Kirim Pesan",
+      },
+      toast: {
+        title: "Membuka WhatsApp",
+        description: "Anda akan diarahkan ke WhatsApp.",
+      },
+    },
+    // Footer
+    footer: {
+      description: "Inovasi kendaraan listrik Indonesia. Motor trail listrik tangguh untuk petualangan tanpa batas.",
+      electric: "100% Electric",
+      product: "Produk",
+      service: "Layanan",
+      company: "Perusahaan",
+      links: {
+        conversion: "Konversi",
+        motorConversion: "Konversi Motor",
+        maintenance: "Perawatan",
+        consulting: "Konsultasi",
+        training: "Pelatihan",
+        aboutUs: "Tentang Kami",
+        gallery: "Galeri",
+        contact: "Kontak",
+        companyProfile: "Company Profile",
+      },
+      downloadProfile: "Download Company Profile",
+      copyright: "All rights reserved.",
+      madeIn: "Made with ⚡ in Indonesia",
+    },
+    // Product Detail
+    productDetail: {
+      backToProducts: "Kembali ke Produk",
+      startingFrom: "Mulai dari",
+      orderNow: "Pesan Sekarang",
+      viewSpecs: "Lihat Spesifikasi",
+      features: "Fitur",
+      featuresHighlight: "Unggulan",
+      warranty: "Garansi Resmi",
+      warrantyYears: "Tahun garansi mesin",
+      warrantyDesc: "dilengkapi dengan garansi resmi selama",
+      warrantyEngine: "tahun untuk mesin dan",
+      warrantyBattery: "tahun untuk baterai.",
+      service: "Service Berkala",
+      serviceFree: "Gratis",
+      serviceDesc: "Dapatkan layanan service gratis sebanyak",
+      serviceTimes: "kali selama",
+      serviceYears: "tahun pertama pembelian.",
+      interested: "Tertarik dengan",
+      interestedDesc: "Hubungi kami untuk informasi lebih lanjut dan jadwalkan test ride.",
+      scheduleTestRide: "Jadwalkan Test Ride",
+      previous: "Sebelumnya",
+      next: "Selanjutnya",
+      allProducts: "Semua Produk",
+    },
+    // Loading
+    loading: {
+      text: "Memuat...",
+    },
+    // WhatsApp
+    whatsapp: {
+      defaultMessage: "Halo, saya tertarik dengan produk Tangguh EV!",
+    },
+    // AI Chat
+    aiChat: {
+      title: "Tangguh AI",
+      status: "Online • Expert",
+      welcomeMessage: "Selamat datang di **Tangguh Electric Vehicle**! 🔋\n\nSaya adalah AI Konsultan yang siap membantu Anda menemukan motor listrik impian atau informasi layanan konversi.",
+      quickActions: "Aksi Cepat",
+      inputPlaceholder: "Ketik pertanyaan Anda...",
+      poweredBy: "Powered by AI • Tangguh Electric Vehicle",
+      errorConnection: "Koneksi terputus. Silakan coba lagi.",
+      errorGeneral: "Terjadi kesalahan",
+      actions: {
+        specs: { label: "Spesifikasi Unit", query: "Sebutkan spesifikasi singkat unit Tangguh ST3, DX4, dan SP5." },
+        conversion: { label: "Info Konversi BBM", query: "Berapa biaya dan bagaimana cara konversi motor bensin ke listrik?" },
+        contact: { label: "Kontak Admin", query: "Berikan nomor WhatsApp admin Tangguh EV." },
+        whatsapp: { label: "Chat via WhatsApp" },
+      },
+    },
+  },
+  en: {
+    // Navbar
+    nav: {
+      about: "About",
+      products: "Products",
+      conversion: "Conversion",
+      gallery: "Gallery",
+      contact: "Contact",
+      contactUs: "Contact Us",
+    },
+    // Hero
+    hero: {
+      badge: "Indonesia Electric Vehicle Innovation",
+      title1: "Unlimited",
+      title2: "Adventure",
+      description: "High-performance electric trail motorcycle with zero emissions. Experience rugged and eco-friendly riding.",
+      viewProducts: "View Products",
+      motorConversion: "Motor Conversion",
+      electric: "Electric",
+      emission: "Emission",
+      adventure: "Adventure",
+      scroll: "Scroll",
+    },
+    // About
+    about: {
+      sectionLabel: "About Us",
+      title: "Tangguh",
+      titleHighlight: "Electric Vehicle",
+      description: "A professional company in the Creative Electric Vehicle sector, contributing to the success of government programs through highly innovative products.",
+      vision: "Vision",
+      visionText: "To become a new innovation in Indonesia's off-road vehicle industry by providing long-term, rugged, and enjoyable mobility solutions for adventure. To be the leader in fuel-to-electric vehicle conversion solutions in Indonesia.",
+      mission: "Mission",
+      missionItems: [
+        "Develop electric trail motorcycles with the latest safe and efficient technology.",
+        "Promote the use of electric vehicles to reduce carbon emissions.",
+        "Provide reliable conversion and maintenance services.",
+      ],
+      valuesTitle: "Company Values",
+      values: {
+        innovation: { title: "Innovation", description: "Creating cutting-edge products and technologies with better new solutions." },
+        quality: { title: "Quality", description: "Delivering products with high safety standards and durability." },
+        service: { title: "Service", description: "Building strong customer relationships and providing the best service." },
+        collaboration: { title: "Collaboration", description: "Working with various vendors for quality spare parts." },
+      },
+      downloadProfile: "Download Company Profile",
+      downloadProfileDesc: "Learn more about Tangguh EV through our company profile",
+    },
+    // Products
+    products: {
+      sectionLabel: "Our Products",
+      title: "Electric Trail",
+      titleHighlight: "Motorcycle",
+      description: "Three electric trail motorcycle variants with high performance for all your adventure needs.",
+      topSpeed: "Top Speed",
+      range: "Range",
+      power: "Power",
+      detailButton: "Product Details",
+      st3: {
+        tagline: "Dual Purpose",
+        description: "Dual-function tires with the perfect combination of strong traction on rough terrain and maximum stability on highways. Easy to control even for beginners.",
+      },
+      dx4: {
+        tagline: "Ready to Race",
+        description: "Designed specifically for professionals who crave speed and toughness on every track. Supported by superior technology and aerodynamic design.",
+      },
+      sp5: {
+        tagline: "Supermoto",
+        description: "A rugged trail motorcycle with supermoto concept, conquering rough terrain while providing comfort and stability on urban roads.",
+      },
+    },
+    // Conversion
+    conversion: {
+      sectionLabel: "Conversion Service",
+      title: "Electric Motor",
+      titleHighlight: "Conversion",
+      description: "Converting fuel engines to battery-based electric motors—including installation of electric motor (BLDC), controller, battery, charging system, and frame modification if needed.",
+      floatingCard: "Convert your gasoline motorcycle to an eco-friendly electric motorcycle",
+      components: {
+        controller: { name: "Controller", desc: "Advanced control system" },
+        battery: { name: "Battery", desc: "Quality lithium-ion" },
+        motor: { name: "BLDC Motor", desc: "Efficient electric motor" },
+        electrical: { name: "Electrical", desc: "Complete charging system" },
+      },
+      benefits: [
+        "Reduction of CO (Carbon Monoxide) emissions",
+        "Reduction of imported fuel usage",
+        "Local component industry opportunities",
+        "Faster and silent operation",
+        "Lower maintenance costs",
+        "Environmentally friendly",
+      ],
+      consultButton: "Conversion Consultation",
+    },
+    // Services
+    services: {
+      sectionLabel: "Our Services",
+      title: "Complete",
+      titleHighlight: "Solutions",
+      description: "We provide comprehensive services for all your electric vehicle needs.",
+      learnMore: "Learn More",
+      items: {
+        conversion: {
+          title: "Motor Conversion",
+          description: "Converting fuel engines to battery-based electric motors with high-quality components and safety standards.",
+          features: ["BLDC Motor", "Controller", "Lithium Battery", "Frame Modification"],
+        },
+        maintenance: {
+          title: "Maintenance & Service",
+          description: "Battery maintenance, motor, electrical systems, routine checks, and spare parts replacement.",
+          features: ["Diagnostics", "Spare Parts", "Tune-up", "Service Warranty"],
+        },
+        consulting: {
+          title: "Consulting & R&D",
+          description: "Technical consultation for vehicle modifications and research on motor efficiency & control systems.",
+          features: ["Technical Consulting", "Battery Research", "Control Systems", "Custom Project"],
+        },
+        education: {
+          title: "Education & Training",
+          description: "Technical training for workshops, vocational schools/technicians, legal & safety training, community workshops.",
+          features: ["Workshop Training", "Vocational Workshop", "Certification", "Community Event"],
+        },
+      },
+    },
+    // Gallery
+    gallery: {
+      sectionLabel: "Gallery",
+      title: "Our",
+      titleHighlight: "Documentation",
+      description: "View our collection of product photos and Tangguh Electric Vehicle activities.",
+      filters: {
+        all: "All",
+      },
+      categories: {
+        product: "Product",
+        delivery: "Delivery",
+        adventure: "Adventure",
+      },
+    },
+    // Contact
+    contact: {
+      sectionLabel: "Contact Us",
+      title: "Ready For",
+      titleHighlight: "Adventure?",
+      description: "Contact us for more information about products or conversion services.",
+      infoTitle: "Contact Information",
+      address: "Address",
+      phone: "Phone",
+      email: "Email",
+      followUs: "Follow Us",
+      sendMessage: "Send Message",
+      form: {
+        name: "Full Name",
+        namePlaceholder: "Your Name",
+        email: "Email",
+        emailPlaceholder: "email@yours.com",
+        phone: "Phone Number",
+        phonePlaceholder: "+62...",
+        message: "Message",
+        messagePlaceholder: "Write your message...",
+        submit: "Send Message",
+      },
+      toast: {
+        title: "Opening WhatsApp",
+        description: "You will be redirected to WhatsApp.",
+      },
+    },
+    // Footer
+    footer: {
+      description: "Indonesia electric vehicle innovation. Rugged electric trail motorcycle for unlimited adventure.",
+      electric: "100% Electric",
+      product: "Products",
+      service: "Services",
+      company: "Company",
+      links: {
+        conversion: "Conversion",
+        motorConversion: "Motor Conversion",
+        maintenance: "Maintenance",
+        consulting: "Consulting",
+        training: "Training",
+        aboutUs: "About Us",
+        gallery: "Gallery",
+        contact: "Contact",
+        companyProfile: "Company Profile",
+      },
+      downloadProfile: "Download Company Profile",
+      copyright: "All rights reserved.",
+      madeIn: "Made with ⚡ in Indonesia",
+    },
+    // Product Detail
+    productDetail: {
+      backToProducts: "Back to Products",
+      startingFrom: "Starting from",
+      orderNow: "Order Now",
+      viewSpecs: "View Specifications",
+      features: "Key",
+      featuresHighlight: "Features",
+      warranty: "Official Warranty",
+      warrantyYears: "Years engine warranty",
+      warrantyDesc: "comes with official warranty for",
+      warrantyEngine: "years for engine and",
+      warrantyBattery: "years for battery.",
+      service: "Regular Service",
+      serviceFree: "Free",
+      serviceDesc: "Get free service for",
+      serviceTimes: "times during the first",
+      serviceYears: "years of purchase.",
+      interested: "Interested in",
+      interestedDesc: "Contact us for more information and schedule a test ride.",
+      scheduleTestRide: "Schedule Test Ride",
+      previous: "Previous",
+      next: "Next",
+      allProducts: "All Products",
+    },
+    // Loading
+    loading: {
+      text: "Loading...",
+    },
+    // WhatsApp
+    whatsapp: {
+      defaultMessage: "Hello, I am interested in Tangguh EV products!",
+    },
+    // AI Chat
+    aiChat: {
+      title: "Tangguh AI",
+      status: "Online • Expert",
+      welcomeMessage: "Welcome to **Tangguh Electric Vehicle**! 🔋\n\nI am an AI Consultant ready to help you find your dream electric motorcycle or conversion service information.",
+      quickActions: "Quick Actions",
+      inputPlaceholder: "Type your question...",
+      poweredBy: "Powered by AI • Tangguh Electric Vehicle",
+      errorConnection: "Connection lost. Please try again.",
+      errorGeneral: "An error occurred",
+      actions: {
+        specs: { label: "Unit Specifications", query: "List the brief specifications of Tangguh ST3, DX4, and SP5." },
+        conversion: { label: "Conversion Info", query: "What is the cost and process to convert a gasoline motorcycle to electric?" },
+        contact: { label: "Contact Admin", query: "Provide the WhatsApp number of Tangguh EV admin." },
+        whatsapp: { label: "Chat via WhatsApp" },
+      },
+    },
+  },
+};
+
+export type Language = "id" | "en";
+export type Translations = typeof translations.id;

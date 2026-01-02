@@ -7,22 +7,27 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { GallerySection } from "@/components/GallerySection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { OrganizationSchema } from "@/components/OrganizationSchema";
+import { AIChatWidget } from "@/components/AIChatWidget";
+import { PageTransition } from "@/components/PageTransition";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <ProductsSection />
-      <ConversionSection />
-      <ServicesSection />
-      <GallerySection />
-      <ContactSection />
-      <Footer />
-      <WhatsAppButton />
-    </main>
+    <PageTransition>
+      <main className="min-h-screen bg-background">
+        <OrganizationSchema />
+        <Navbar />
+        <HeroSection />
+        <AboutSection />
+        <ProductsSection />
+        <ConversionSection />
+        <ServicesSection />
+        <GallerySection />
+        <ContactSection />
+        <Footer />
+        <AIChatWidget />
+      </main>
+    </PageTransition>
   );
 };
 

@@ -3,49 +3,51 @@ import { useRef } from "react";
 import { Gauge, Battery, Zap, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
-
-const products = [
-  {
-    name: "ST3",
-    slug: "st3",
-    tagline: "Dual Purpose",
-    description: "Ban dua fungsi dengan kombinasi sempurna dari tarikan kuat di medan berat dan stabilitas maksimal di jalan raya. Mudah dikendalikan bahkan oleh pengguna baru.",
-    specs: [
-      { icon: Gauge, label: "Top Speed", value: "80 km/h" },
-      { icon: Battery, label: "Jarak", value: "100 km" },
-      { icon: Zap, label: "Power", value: "5 kW" },
-    ],
-    gradient: "from-cyan-500 to-blue-600",
-  },
-  {
-    name: "DX4",
-    slug: "dx4",
-    tagline: "Ready to Race",
-    description: "Dirancang khusus untuk para profesional yang haus akan kecepatan dan ketangguhan di setiap lintasan. Didukung teknologi unggulan dan desain aerodinamis.",
-    specs: [
-      { icon: Gauge, label: "Top Speed", value: "120 km/h" },
-      { icon: Battery, label: "Jarak", value: "80 km" },
-      { icon: Zap, label: "Power", value: "10 kW" },
-    ],
-    gradient: "from-emerald-500 to-teal-600",
-  },
-  {
-    name: "SP5",
-    slug: "sp5",
-    tagline: "Supermoto",
-    description: "Motor trail tangguh dengan konsep supermoto, menaklukkan medan berat sekaligus memberikan kenyamanan dan stabilitas di jalan perkotaan.",
-    specs: [
-      { icon: Gauge, label: "Top Speed", value: "100 km/h" },
-      { icon: Battery, label: "Jarak", value: "120 km" },
-      { icon: Zap, label: "Power", value: "8 kW" },
-    ],
-    gradient: "from-orange-500 to-red-600",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const ProductsSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: false, margin: "-100px", amount: 0.2 });
+  const { t } = useLanguage();
+
+  const products = [
+    {
+      name: "ST3",
+      slug: "st3",
+      tagline: t.products.st3.tagline,
+      description: t.products.st3.description,
+      specs: [
+        { icon: Gauge, label: t.products.topSpeed, value: "80 km/h" },
+        { icon: Battery, label: t.products.range, value: "100 km" },
+        { icon: Zap, label: t.products.power, value: "5 kW" },
+      ],
+      gradient: "from-cyan-500 to-blue-600",
+    },
+    {
+      name: "DX4",
+      slug: "dx4",
+      tagline: t.products.dx4.tagline,
+      description: t.products.dx4.description,
+      specs: [
+        { icon: Gauge, label: t.products.topSpeed, value: "120 km/h" },
+        { icon: Battery, label: t.products.range, value: "80 km" },
+        { icon: Zap, label: t.products.power, value: "10 kW" },
+      ],
+      gradient: "from-emerald-500 to-teal-600",
+    },
+    {
+      name: "SP5",
+      slug: "sp5",
+      tagline: t.products.sp5.tagline,
+      description: t.products.sp5.description,
+      specs: [
+        { icon: Gauge, label: t.products.topSpeed, value: "100 km/h" },
+        { icon: Battery, label: t.products.range, value: "120 km" },
+        { icon: Zap, label: t.products.power, value: "8 kW" },
+      ],
+      gradient: "from-orange-500 to-red-600",
+    },
+  ];
 
   return (
     <section id="produk" className="section-padding relative overflow-hidden bg-secondary/30">
@@ -61,13 +63,13 @@ export const ProductsSection = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">
-            Produk Kami
+            {t.products.sectionLabel}
           </span>
           <h2 className="font-display font-bold text-3xl md:text-5xl text-foreground mb-6">
-            Motor Trail <span className="gradient-text">Listrik</span>
+            {t.products.title} <span className="gradient-text">{t.products.titleHighlight}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Tiga varian motor trail listrik dengan performa tinggi untuk berbagai kebutuhan petualangan Anda.
+            {t.products.description}
           </p>
         </motion.div>
 
@@ -122,7 +124,7 @@ export const ProductsSection = () => {
 
                 <Button variant="outline" className="w-full group/btn" asChild>
                   <Link to={`/produk/${product.slug}`}>
-                    Detail Produk
+                    {t.products.detailButton}
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                   </Link>
                 </Button>

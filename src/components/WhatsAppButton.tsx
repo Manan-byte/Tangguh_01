@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const WhatsAppButton = () => {
-  const whatsappNumber = "628567360026"; // Ganti dengan nomor WhatsApp bisnis
-  const message = "Halo, saya tertarik dengan produk Tangguh EV!";
+  const { t } = useLanguage();
+  const whatsappNumber = "628567360026";
 
   const handleClick = () => {
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(t.whatsapp.defaultMessage)}`, "_blank");
   };
 
   return (
@@ -22,8 +20,6 @@ export const WhatsAppButton = () => {
       aria-label="Chat via WhatsApp"
     >
       <MessageCircle className="w-7 h-7 text-white group-hover:scale-110 transition-transform" />
-      
-      {/* Pulse effect */}
       <span className="absolute w-full h-full rounded-full bg-[#25D366] animate-ping opacity-30" />
     </motion.button>
   );
