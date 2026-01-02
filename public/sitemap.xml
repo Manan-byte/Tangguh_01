@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://tangguhev.com/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Products Section (anchor) -->
+  <url>
+    <loc>https://tangguhev.com/#produk</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Product ST3 -->
+  <url>
+    <loc>https://tangguhev.com/produk/st3</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://tangguhev.com/images/st3.jpg</image:loc>
+      <image:title>Tangguh ST3 - Motor Trail Listrik</image:title>
+      <image:caption>ST3 adalah motor trail listrik dual purpose untuk medan berat dan jalan raya dengan kecepatan 80 km/h dan jarak tempuh 100 km</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Product DX4 -->
+  <url>
+    <loc>https://tangguhev.com/produk/dx4</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://tangguhev.com/images/dx4.jpg</image:loc>
+      <image:title>Tangguh DX4 - Motor Trail Listrik Racing</image:title>
+      <image:caption>DX4 adalah motor trail listrik berperforma tinggi untuk profesional dengan kecepatan 120 km/h dan tenaga 10 kW</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Product SP5 -->
+  <url>
+    <loc>https://tangguhev.com/produk/sp5</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://tangguhev.com/images/sp5.jpg</image:loc>
+      <image:title>Tangguh SP5 - Motor Supermoto Listrik</image:title>
+      <image:caption>SP5 adalah motor supermoto listrik serbaguna dengan jarak tempuh terpanjang 120 km dan mode berkendara Eco, Normal, Sport</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://tangguhev.com/#tentang</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Conversion Section -->
+  <url>
+    <loc>https://tangguhev.com/#konversi</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Gallery Section -->
+  <url>
+    <loc>https://tangguhev.com/#galeri</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://tangguhev.com/#kontak</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+</urlset>

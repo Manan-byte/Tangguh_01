@@ -1,3 +1,7 @@
+# Sitemap
+Sitemap: https://tangguhev.com/sitemap.xml
+
+# Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +16,7 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Disallow admin/private paths (if any)
+Disallow: /api/
+Disallow: /_
