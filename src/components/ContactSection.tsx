@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { MapPin, Phone, Mail, Send, MessageCircle, Instagram, Facebook , Youtube , Tiktok  } from "lucide-react";
+import { MapPin, Phone, Mail, Send, MessageCircle, Instagram, Facebook   } from "lucide-react";
 import { Button } from "./ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -8,8 +8,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const socialLinks = [
   { icon: Instagram, href: "#", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Youtube, href: "#", label: "Youtube" },
-  { icon: Tiktok, href: "#", label: "Tiktok" },
   { icon: MessageCircle, href: "#", label: "WhatsApp" },
 ];
 
