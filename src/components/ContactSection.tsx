@@ -1,19 +1,40 @@
-import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { MapPin, Phone, Mail, Send, MessageCircle, Instagram, Facebook   } from "lucide-react";
+import { MapPin, Phone, Mail, Send, MessageCircle, Instagram, Facebook } from "lucide-react";
 import { Button } from "./ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp" },
+// YouTube Icon Component
+const YoutubeIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+  </svg>
+);
+
+// TikTok Icon Component
+const TiktokIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
+
+interface SocialLink {
+  icon: typeof Instagram | typeof Facebook | typeof MessageCircle | typeof YoutubeIcon | typeof TiktokIcon;
+  href: string;
+  label: string;
+  isCustom?: boolean;
+}
+
+const socialLinks: SocialLink[] = [
+  { icon: Instagram, href: "https://instagram.com/tangguhev", label: "Instagram", isCustom: false },
+  { icon: Facebook, href: "https://facebook.com/tangguhev", label: "Facebook", isCustom: false },
+  { icon: YoutubeIcon, href: "https://youtube.com/@tangguhev", label: "YouTube", isCustom: true },
+  { icon: TiktokIcon, href: "https://tiktok.com/@tangguhev", label: "TikTok", isCustom: true },
+  { icon: MessageCircle, href: "https://wa.me/628567360026", label: "WhatsApp", isCustom: false },
 ];
 
 export const ContactSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-100px", amount: 0.2 });
   const { toast } = useToast();
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
@@ -49,12 +70,7 @@ export const ContactSection = () => {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div ref={ref} className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16 animate-fade-in">
           <span className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">
             {t.contact.sectionLabel}
           </span>
@@ -64,14 +80,10 @@ export const ContactSection = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {t.contact.description}
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="animate-fade-in">
             <div className="glass-card rounded-3xl p-8 mb-8">
               <h3 className="font-display font-bold text-2xl text-foreground mb-6">
                 {t.contact.infoTitle}
@@ -95,26 +107,28 @@ export const ContactSection = () => {
               <h3 className="font-display font-semibold text-lg text-foreground mb-4">
                 {t.contact.followUs}
               </h3>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-3">
                 {socialLinks.map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors group"
                     aria-label={social.label}
                   >
-                    <social.icon className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                    {social.isCustom ? (
+                      <social.icon className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                    ) : (
+                      <social.icon className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                    )}
                   </a>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div className="animate-fade-in">
             <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-8">
               <h3 className="font-display font-bold text-2xl text-foreground mb-6">
                 {t.contact.sendMessage}
@@ -131,7 +145,7 @@ export const ContactSection = () => {
                     required
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm text-muted-foreground mb-2 block">{t.contact.form.email}</label>
                     <input
@@ -171,7 +185,7 @@ export const ContactSection = () => {
                 </Button>
               </div>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
