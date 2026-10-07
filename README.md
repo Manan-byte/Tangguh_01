@@ -1,73 +1,43 @@
-# Welcome to your Lovable project
+# ⚡ Tangguh Electric Vehicle (EV)
 
-## Project info
+> **Portal & Landing Page Modern** untuk Tangguh Electric Vehicle — Pelopor motor trail listrik dan layanan konversi kendaraan bermotor BBM ke listrik di Indonesia.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+[![React](https://img.shields.io/badge/React-18-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-Build%20Tool-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Components-000000?style=flat-square&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🌟 Highlight Produk & Halaman
 
-**Use Lovable**
+- 🏍️ **Showcase Motor Trail Listrik**: Spesifikasi torsi, jarak tempuh, kapasitas baterai, dan ketangguhan medan off-road ramah lingkungan tanpa emisi.
+- 🔄 **Layanan Konversi EV**: Informasi alur konversi motor konvensional ke penggerak listrik sesuai regulasi resmi.
+- 🎨 **Modern Design System**: Dibangun dengan komponen Radix UI & Shadcn UI dengan animasi transisi yang mulus.
+- 📱 **Fully Responsive**: Tampilan optimal di semua resolusi layar ponsel hingga monitor desktop.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Menjalankan Project
 
-**Use your preferred IDE**
+### 1. Instalasi Dependensi
+```bash
+# Clone repository
+git clone https://github.com/Manan-byte/Tangguh_01.git
+cd Tangguh_01
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Install packages menggunakan npm atau bun
+npm install
 ```
 
-**Edit a file directly in GitHub**
+### 2. Mode Pengembangan
+```bash
+npm run dev
+```
+Akses di browser pada `http://localhost:8080` atau port yang ditampilkan di terminal.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### 3. Build Produksi
+```bash
+npm run build
+```
