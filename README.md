@@ -1,6 +1,6 @@
 # ⚡ Tangguh Electric Vehicle (EV)
 
-> **Portal & Landing Page Modern** untuk Tangguh Electric Vehicle — Pelopor motor trail listrik dan layanan konversi kendaraan bermotor BBM ke listrik di Indonesia.
+> **Modern Web Portal & Landing Page** for Tangguh Electric Vehicle — Pioneering electric trail motorcycles and combustion-to-EV vehicle conversion in Indonesia.
 
 [![React](https://img.shields.io/badge/React-18-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -10,34 +10,20 @@
 
 ---
 
-## 🌟 Highlight Produk & Halaman
+## 🌟 Highlights & Features
 
-- 🏍️ **Showcase Motor Trail Listrik**: Spesifikasi torsi, jarak tempuh, kapasitas baterai, dan ketangguhan medan off-road ramah lingkungan tanpa emisi.
-- 🔄 **Layanan Konversi EV**: Informasi alur konversi motor konvensional ke penggerak listrik sesuai regulasi resmi.
-- 🎨 **Modern Design System**: Dibangun dengan komponen Radix UI & Shadcn UI dengan animasi transisi yang mulus.
-- 📱 **Fully Responsive**: Tampilan optimal di semua resolusi layar ponsel hingga monitor desktop.
+- 🏍️ **Electric Trail Showcase**: Detailed specs for torque, range, battery capacity, and off-road zero-emission capabilities.
+- 🔄 **EV Conversion Services**: Step-by-step workflow for converting combustion engines to electric propulsion following official standards.
+- 🎨 **Modern Design System**: Built with Radix UI & Shadcn UI primitives, featuring smooth interactive transitions.
+- 📱 **Fully Responsive**: Optimized across mobile screens, tablets, and high-resolution desktop monitors.
 
 ---
 
-## 🚀 Menjalankan Project
+## 🚀 Running Locally
 
-### 1. Instalasi Dependensi
 ```bash
-# Clone repository
 git clone https://github.com/Manan-byte/Tangguh_01.git
 cd Tangguh_01
-
-# Install packages menggunakan npm atau bun
 npm install
-```
-
-### 2. Mode Pengembangan
-```bash
 npm run dev
-```
-Akses di browser pada `http://localhost:8080` atau port yang ditampilkan di terminal.
-
-### 3. Build Produksi
-```bash
-npm run build
 ```
